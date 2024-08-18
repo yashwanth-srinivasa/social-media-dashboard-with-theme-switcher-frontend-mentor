@@ -83,6 +83,9 @@ h1, .attribution {
 .main_summary__facebook, .main_summary__twitter, .main_summary__instagram, .main_summary__youtube {
   background-color: var(--card-background);
 }
+.main_summary__facebook:hover, .main_summary__twitter:hover, .main_summary__instagram:hover, .main_summary__youtube:hover {
+  background-color: var(--top-background-pattern);
+}
 .main_summary__facebook {
   border-top: solid var(--card_border-top) var(--facebook);
 }
