@@ -1,3 +1,4 @@
 1. input type="range" : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 2. prefers-color-scheme: https://dev.to/abbeyperini/dark-mode-toggle-and-prefers-color-scheme-4f3m
 3. store theme preference: https://whitep4nth3r.com/blog/best-light-dark-mode-theme-toggle-javascript/#:~:text=Get%20theme%20preference%20from%20local%20storage,-We%20can%20use&text=On%20page%20load%2C%20use%20localStorage,the%20value%20will%20be%20null%20.
+4. Universally best toggle : https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f

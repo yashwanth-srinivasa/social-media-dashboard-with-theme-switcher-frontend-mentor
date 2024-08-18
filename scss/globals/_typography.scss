@@ -1,14 +1,14 @@
 @use '../util' as u;
 
 h1,h2,h3    {
-    font-weight: 700;
-    line-height: 1.1;
+    font-weight: 600;
+    line-height: 0.0;
     margin-top: 0;
 }
 
 h1, button  {
 
-    font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(32));
+    font-size: clamp(u.rem(20), u.rem(16) + 2vw, u.rem(32));
 
 }
 
@@ -21,28 +21,58 @@ p   {
     margin-top: 0;
     // font-size: clamp(14px, 12px + 2vw, 32px);
     font-size: u.rem(16);
+    font-weight: 700;
 }
 
 a, a:visited, a:active   {
     text-decoration: none;
 }
 
-.calculator {
+.header {
+    font-weight: 700;
+}
 
-  &__keys   {
- 
-  
-        &--clear {
-            font-size: clamp(u.rem(22), u.rem(16) + 2vw, u.rem(22));
-        }
-  
-        &--equal {
-            font-size: clamp(u.rem(22), u.rem(16) + 2vw, u.rem(22));
-        }
-  
-        &--delete {
-            font-size: clamp(u.rem(22), u.rem(16) + 2vw, u.rem(22));
+.card_header    {
+
+    font-weight: 600;
+}
+
+.card_body {
+
+    &__numbers {
+        font-size: 3.4rem;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: 0.85rem;
+        letter-spacing: 0.3rem;
+    }
+ }
+
+ .card_footer   {
+    font-size: clamp(u.rem(10), u.rem(8) + 1.5vw, u.rem(14));
+    font-weight: 700;
+
+    &__down {
+        font-size: clamp(u.rem(10), u.rem(8) + 1.5vw, u.rem(14));
+        font-weight: 700;
+    }
+ }
+
+ .overview   {
+    &__card {
+
+        &--footer   {
+
+            &-percentage-up {
+                font-size: clamp(u.rem(10), u.rem(8) + 1.5vw, u.rem(12));
+            }
+
+            &-percentage-down {
+                font-size: clamp(u.rem(10), u.rem(8) + 1.5vw, u.rem(12));
+            }
         }
     }
-  
-  }
+}
+ 

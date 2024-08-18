@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/styles.css">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | Social Media Dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -19,21 +19,27 @@
 
 <div class="container">
 
+ <div class="header_background"></div>
+
  <div class="header">
 
    <div class="header__title">
-    <h1>Social Media Dashboard</h1>
-    <h2>Total Followers: 23,004</h2>
+    <h1 class="header__title--main">Social Media Dashboard</h1>
+    <p class="header__title--sub">Total Followers: 23,004</p>
    </div> 
 
   <div class="header__theme_switcher">
-     <div>Dark Mode</div>
-     <input type="range" min="0" max="1" />
+   <div>Dark Mode</div>
+    <label for="toggle-switch" class="switch">
+      <input type="checkbox" id="toggle-switch" onclick="changeTheme()">
+      <span class="slider round">
+      </span>
+    </label>
    </div>
 
  </div>
   
-<div class="main_summary">
+<section class="main_summary">
 
   <div class="main_summary__facebook">
     <div class="card_header">
@@ -41,11 +47,11 @@
       @nathanf
     </div>
     <div class="card_body">
-     1987
-     Followers
+     <div class="card_body__numbers">1987</div>
+     <div class="card_body__text">FOLLOWERS</div>
     </div>
     <div class="card_footer"> 
-      <img src="images/icon-up.svg" alt="Up by"> 12 Today
+      <img class="icon" src="images/icon-up.svg" alt="Up by"> 12 Today
     </div>
   </div>
 
@@ -54,12 +60,12 @@
       <img src="images/icon-twitter.svg" alt="twitter">
       @nathanf
     </div>
-    <div class="card_body">  
-      1044
-      Followers
+    <div class="card_body">
+      <div class="card_body__numbers">1044</div>
+      <div class="card_body__text">FOLLOWERS</div>
     </div>  
     <div class="card_footer">
-      <img src="images/icon-up.svg" alt="Up by">  99 Today
+      <img class="icon" src="images/icon-up.svg" alt="Up by">  99 Today
      </div>
   </div>
 
@@ -69,11 +75,11 @@
       @realnathanf
     </div>
     <div class="card_body">
-      11k
-      Followers
+      <div class="card_body__numbers">11k</div>
+      <div class="card_body__text">FOLLOWERS</div>
     </div>  
     <div class="card_footer">
-      <img src="images/icon-up.svg" alt="Up by"> 1099 Today
+      <img class="icon" src="images/icon-up.svg" alt="Up by"> 1099 Today
     </div>
   </div>
 
@@ -82,125 +88,143 @@
       <img src="images/icon-youtube.svg" alt="youtube">
       Nathan F.
     </div>
-    <div class="card_body">  
-      8239
-      Subscribers
+    <div class="card_body">
+      <div class="card_body__numbers">8239</div>
+      <div class="card_body__text">SUBSCRIBERS</div>
     </div>
-    <div class="card_footer">
-      <img src="images/icon-down.svg" alt="Down by"> 144 Today
+    <div class="card_footer__down">
+      <img class="icon" src="images/icon-down.svg" alt="Down by"> 144 Today
     </div>  
   </div>
 
-</div>
+</section>
 
-<div class="overview">
+<h1 class="overview__title">
+  Overview - Today
+</h1>
 
-  <div class="overview__title">
-    Overview - Today
-  </div>
+<section class="overview">
 
- <div class="overview__fb--views">
-      <div class="ov_card_header">
-        Page Views
-        <img src="images/icon-facebook.svg" alt="facebook views">
+ <div class="overview__card">
+      <div class="overview__card--header">
+        <p class="overview__card--header-text">Page Views</p>
+        <img class="overview__card--header-img" src="images/icon-facebook.svg" alt="facebook views">
       </div>
-      <div class="ov_card_footer">
-        87
-        <img src="images/icon-up.svg" alt="Up by">
-        3%
+      <div class="overview__card--footer">
+        <h1 class="overview__card--footer-stat">87</h1>
+        <div class="overview__card--footer-right">
+          <img class="overview__card--footer-img" src="images/icon-up.svg" alt="Up by">
+          <p class="overview__card--footer-percentage-up"> 3% </p>
+        </div>
       </div>
  </div> 
 
- <div class="overview__fb--likes">
-      <div class="ov_card_header">
-        Likes
-        <img src="images/icon-facebook.svg" alt="facebook likes">
-      </div>
-      <div class="ov_card_footer">
-        52
-        <img src="images/icon-up.svg" alt="Up by">
-        2%
-      </div>
+ <div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Likes</p>
+    <img class="overview__card--header-img" src="images/icon-facebook.svg" alt="facebook views">
   </div>
-
-  <div class="overview__insta--likes">
-      <div class="ov_card_header">
-        Likes
-        <img src="images/icon-instagram.svg" alt="instagram views">
-      </div>
-      <div class="ov_card_footer">
-        5462
-        <img src="images/icon-up.svg" alt="Up by">
-        2257%
-      </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">52</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-down.svg" alt="Down by">
+      <p class="overview__card--footer-percentage-down"> 2% </p>
+    </div>
   </div>
+</div> 
 
-  <div class="overview__insta--views">
-      <div class="ov_card_header">
-        Profile Views
-        <img src="images/icon-instagram.svg" alt="instagram likes">  
-      </div>
-      <div class="ov_card_footer"> 
-        52k
-        <img src="images/icon-up.svg" alt="Up by">
-        1375%
-      </div>
- </div>
-
- <div class="overview__twitter--retweets">
-      <div class="ov_card_header">
-        Retweets
-        <img src="images/icon-twitter.svg" alt="twitter retweets">
-      </div>
-      <div class="ov_card_footer">
-        117
-        <img src="images/icon-up.svg" alt="Up by">
-        303%
-      </div>
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Likes</p>
+    <img class="overview__card--header-img" src="images/icon-instagram.svg" alt="instagram likes">
   </div>
-
- <div class="overview__twitter--likes">
-      <div class="ov_card_header"> 
-        Likes
-        <img src="images/icon-twitter.svg" alt="twitter likes">
-      </div>
-      <div class="ov_card_footer">
-        507
-        <img src="images/icon-up.svg" alt="Up by">
-        553%
-      </div>  
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">5462</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-up.svg" alt="Up by">
+      <p class="overview__card--footer-percentage-up"> 2257% </p>
+    </div>
   </div>
+</div> 
 
- <div class="overview__youtube--likes">
-    <div class="ov_card_header">
-      Likes
-      <img src="images/icon-youtube.svg" alt="youtube likes">
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Profile Views</p>
+    <img class="overview__card--header-img" src="images/icon-instagram.svg" alt="instagram profile views">
+  </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">52k</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-up.svg" alt="Up by">
+      <p class="overview__card--footer-percentage-up"> 1375% </p>
     </div>
-    <div class="ov_card_footer_down">
-      107
-      <img src="images/icon-down.svg" alt="Down by">
-      19%
-    </div>
- </div>
+  </div>
+</div> 
 
- <div class="overview__youtube--views">
-    <div class="ov_card_header">
-      Total Views
-      <img src="images/icon-youtube.svg" alt="youtube views">
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Retweets</p>
+    <img class="overview__card--header-img" src="images/icon-twitter.svg" alt="Retweets">
+  </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">117</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-up.svg" alt="Up by">
+      <p class="overview__card--footer-percentage-up"> 303% </p>
     </div>
-    <div class="ov_card_footer_down">
-      1407
-      <img src="images/icon-down.svg" alt="Down by">
-      12%
-    </div>
- </div>
+  </div>
+</div> 
 
-</div>
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Likes</p>
+    <img class="overview__card--header-img" src="images/icon-twitter.svg" alt="twitter likes">
+  </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">507</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-up.svg" alt="Up by">
+      <p class="overview__card--footer-percentage-up"> 553% </p>
+    </div>
+  </div>
+</div> 
+
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Likes</p>
+    <img class="overview__card--header-img" src="images/icon-youtube.svg" alt="youtube likes">
+  </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">107</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-down.svg" alt="Down by">
+      <p class="overview__card--footer-percentage-down"> 19% </p>
+    </div>
+  </div>
+</div> 
+
+<div class="overview__card">
+  <div class="overview__card--header">
+    <p class="overview__card--header-text">Total Views</p>
+    <img class="overview__card--header-img" src="images/icon-youtube.svg" alt="youtube views">
+  </div>
+  <div class="overview__card--footer">
+    <h1 class="overview__card--footer-stat">1407</h1>
+    <div class="overview__card--footer-right">
+      <img class="overview__card--footer-img" src="images/icon-down.svg" alt="Down by">
+      <p class="overview__card--footer-percentage-down"> 12% </p>
+    </div>
+  </div>
+</div> 
+
+</section>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/yashwanth-srinivasa">Yashwanth</a>.
   </div>
   
+  <script src="./app/switch.js"></script>
+
 </body>
 </html>

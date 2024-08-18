@@ -9,14 +9,19 @@ html {
   }
 
 *, *::before, *::after{
-    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+img {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // width: u.rem(20);
+    // height: u.rem(20);
 }
 
 body    {
     min-height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
     font-family: u.$font;
